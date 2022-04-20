@@ -17,14 +17,9 @@ let max = Math.max(...array);
 console.log(min);
 console.log(max);
 
-let indexMin = min - 1;
-let indexMax = max - 1;
-console.log(indexMin);
-console.log(indexMax);
-
 task1.innerHTML = `
-Max значение ${max} с индексом ${indexMax} и 
-Min значение ${min} с индексом ${indexMin}.`;
+Max значение ${max} с индексом ${array.indexOf(max)} и 
+Min значение ${min} с индексом ${array.indexOf(min)}.`;
 //2. Заполнить массив (100 элементов) случайными значениями (целое без знаковое). Найти количество элементов
 // в диапазоне 0-10,11-100,101-1000 и т.д. до 1000001, числа свыше считать отдельно. Вывести на экран.
 const result1 = array.filter(elem => {
