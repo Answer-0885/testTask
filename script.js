@@ -6,6 +6,8 @@ const task3 = document.querySelector('.task3');
 const task4  = document.querySelector('.task4');
 const task5  = document.querySelector('.task5');
 const task6  = document.querySelector('.task6');
+const task7  = document.querySelector('.task7');
+const task8  = document.querySelector('.task8');
 
 //1. Заполнить массив (100 элементов) случайными значениями (целое без знаковое).
 // Найти максимальный и минимальный элемент массива и их индексы, вывести на экран.
@@ -154,3 +156,201 @@ task5.innerHTML = `Для экономии места создадим 10 слу
 //   в каждой строке записаны два числа - исходное, и число составляющее 18% от него,
 //    округлить до 2х знаков после запятой. Разделить их точкой с запятой.
 //  Решить задачу с применением хранения значений в виде массива структур и без него.
+let array26 = [];
+for (let i = 0; i < 10; i++) {
+    array26.push(parseFloat(Math.random() * 100).toFixed(2))
+}
+console.log(array26);
+
+let array266 = [];
+array26.forEach((item)=>{
+    array266.push(parseFloat(item*0.18).toFixed(2)) 
+})
+console.log(array266);
+
+let str = '';
+for (let i = 0; i< array26.length; i++) {
+if (array26[i]!==undefined) str +=i + ' - '+array26[i]+'(100%)' + ' - ' + array266[i] + '(18%)' + '<br>';
+}
+
+
+task6.innerHTML = `Нам дан массив случайных чисел <br> ${array26.join('; ')},<br> 
+Выводим на экран исходное число и 18% от его значения: <br>
+${str}`;
+
+//7. Дан текстовый файл, в каждой строке которого содержатся два числа с плавающей точкой.Между собой
+// разделены точкой с запятой.
+// Проверить выполняется ли условие, что второе число составляет 18% от первого.
+
+
+//8. Дан текстовый файл. Подсчитать отношение количества встречающихся в файле гласных буквы
+// русского алфавита (для каждой буквы отдельно) к общему количеству символов в файле.
+// Результат вывести (букву и отношение) на экран в порядке убывания.
+
+let string = '"Заря прощается с землею, ложится пар на дне долин, смотрю на лес, покрытый мглою, и на огни его вершин."'
+let charCount = Array.from(string).length;
+console.log(charCount); 
+
+
+// Буква А
+function wordsV1() {
+    let k = 0;
+    let v1 = ["а"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v1.length; j++)
+            if (string[i].toLowerCase() === v1[j]) {
+                ++k;
+                break;
+            }  
+    return k ? k : "Нет совпадений";
+          
+};
+// Буква Е
+function wordsV2() {
+    let k = 0;
+    let v2 = ["е"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v2.length; j++)
+            if (string[i].toLowerCase() === v2[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква Ё
+function wordsV3() {
+    let k = 0;
+    let v3 = ["ё"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v3.length; j++)
+            if (string[i].toLowerCase() === v3[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква И
+function wordsV4() {
+    let k = 0;
+     let v4 = ["и"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v4.length; j++)
+            if (string[i].toLowerCase() === v4[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква О
+function wordsV5() {
+    let k = 0;
+    let v5 = ["о"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v5.length; j++)
+            if (string[i].toLowerCase() === v5[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква У
+function wordsV6() {
+    let k = 0;
+    let v6 = ["у"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v6.length; j++)
+            if (string[i].toLowerCase() === v6[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква Ы
+function wordsV7() {
+    let k = 0;
+    let v7 = ["ы"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v7.length; j++)
+            if (string[i].toLowerCase() === v7[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква Э
+function wordsV8() {
+    let k = 0;
+    let v8 = ["э"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v8.length; j++)
+            if (string[i].toLowerCase() === v8[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква Ю
+function wordsV9() {
+    let k = 0;
+    let v9 = ["ю"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v9.length; j++)
+            if (string[i].toLowerCase() === v9[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+};
+// Буква Я
+function wordsV10() {
+    let k = 0;
+    let v10 = ["я"];
+
+    for (let i = 0; i < string.length; i++)
+        for (let j = 0; j < v10.length; j++)
+            if (string[i].toLowerCase() === v10[j]) {
+                ++k;
+                break;
+            } 
+    return k ? k : "Нет совпадений";
+}
+
+task8.innerHTML = `Дана строка: <br> ${string} <br> Общее число символов в ней:
+ ${charCount}<br>
+ Буква А - ${wordsV1()} из ${charCount} символов <br>
+ Буква Е - ${wordsV2()} из ${charCount} символов <br>
+ Буква Ё - ${wordsV3()} из ${charCount} символов <br>
+ Буква И - ${wordsV4()} из ${charCount} символов <br>
+ Буква О - ${wordsV5()} из ${charCount} символов <br>
+ Буква У - ${wordsV6()} из ${charCount} символов <br>
+ Буква Ы - ${wordsV7()} из ${charCount} символов <br>
+ Буква Э - ${wordsV8()} из ${charCount} символов <br>
+ Буква Ю - ${wordsV9()} из ${charCount} символов <br>
+ Буква Я - ${wordsV10()} из ${charCount} символов <br>`
+
+
+
+
+// function words() {
+//     let k = 0;
+//     let v1 = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"];
+//     let f = prompt("Vvedite stroky:");
+//     for (let i = 0; i < f.length; i++)
+//         for (let j = 0; j < v1.length; j++)
+//             if (f[i] === v1[j]) {
+//                 ++k;
+//                 break;
+//             }
+//     return k ? k : "Net sovpadenyi";
+// }
+
+// task8.innerHTML = `${words()}`;
