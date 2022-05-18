@@ -355,8 +355,6 @@ let charCount2 = Array.from(string2).length;
    return acc;
  }, {});
 
-
-
  console.log(countVowels);
  task9.innerHTML = `Дана строка: <br> ${string2} <br> Общее число символов в ней:
  ${charCount2}<br>
